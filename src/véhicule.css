@@ -1,0 +1,51 @@
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.nav-tabs .nav-link {
+    cursor: pointer;
+}
+
+.tab-content {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Ajout de la barre de défilement pour les colonnes */
+.table-wrapper {
+    max-width: 100%;
+    overflow-x: auto;
+    /* Scroll horizontal si le contenu dépasse */
+    white-space: nowrap;
+    /* Empêche le texte de passer à la ligne */
+}
+
+/* Largeur minimale pour les colonnes */
+.table th,
+.table td {
+    text-align: center;
+}
+
+/* Responsive pour petits écrans */
+@media (max-width: 768px) {
+    .form-control {
+        font-size: 14px;
+    }
+
+    .btn {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .table {
+        font-size: 12px;
+    }
+
+    .table th,
+    .table td {
+        padding: 8px;
+    }
+}
