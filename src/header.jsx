@@ -2,10 +2,8 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./header.css"; 
 import { FaHome, FaUser, FaClipboardList, FaCar, FaStore, FaBell, FaSignOutAlt, FaBars, FaTimes } from "react-icons/fa";
-
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
-
     return (
         <header className="header">
             <nav className="navbar">
