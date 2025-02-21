@@ -1,11 +1,11 @@
 import React from "react";
 import { FaUser, FaLock } from "react-icons/fa";
 import "./login.css";
-
-const Login = () => {
+export default function Login (){
   return (
     <div className="login-container d-flex justify-content-center align-items-center vh-100">
       <div className="login-card card p-4 shadow">
+        <img src={"/logo.jpeg"} alt="Login Banner" className="w-100 mb-3" />
         <h3 className="text-center mb-4">Connexion</h3>
         <form>
           <div className="mb-3 input-group">
@@ -22,5 +22,3 @@ const Login = () => {
     </div>
   );
 };
-
-export default Login;
