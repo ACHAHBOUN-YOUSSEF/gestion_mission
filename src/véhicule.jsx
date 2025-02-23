@@ -18,17 +18,16 @@ export default function Vehicule() {
             {/* Onglets pour basculer entre le formulaire et la liste */}
             <ul className="nav nav-tabs">
                 <li className="nav-item">
-                    <a className={`nav-link ${activeTab === "form" ? "active" : ""}`} onClick={() => setActiveTab("form")}>
+                    <Link className={`nav-link ${activeTab === "form" ? "active" : ""}`} onClick={() => setActiveTab("form")}>
                         Ajouter un véhicule
-                    </a>
+                    </Link>
                 </li>
                 <li className="nav-item">
-                    <a className={`nav-link ${activeTab === "table" ? "active" : ""}`} onClick={() => setActiveTab("table")}>véhicules</a>
+                    <Link className={`nav-link ${activeTab === "table" ? "active" : ""}`} onClick={() => setActiveTab("table")}>véhicules</Link>
                 </li>
             </ul>
 
             <div className="tab-content mt-3">
-                {/* Formulaire d'ajout de véhicule */}
                 {activeTab === "form" && (
                     <div className="tab-pane fade show active">
                         <form>
@@ -48,7 +47,15 @@ export default function Vehicule() {
                                 <label htmlFor="matricule" className="form-label">Matricule</label>
                                 <input type="text" className="form-control" id="matricule" placeholder="Entrez le matricule" />
                             </div>
-                            <button type="submit" className="btn btn-primary">Ajouter</button>
+                            <div className="mb-3">
+                                <label htmlFor="matricule" className="form-label">Fournis par </label>
+                                <select name="" id="" className='form form-select'>
+                                    <option value="">fournisseur 1</option>
+                                    <option value="">fournisseur 2</option>
+                                    <option value="">fournisseur 3</option>
+                                </select>
+                            </div>
+                            <button type="submit" className="btn btn-danger">Ajouter</button>
                         </form>
                     </div>
                 )}

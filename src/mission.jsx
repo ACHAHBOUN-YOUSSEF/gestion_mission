@@ -16,10 +16,10 @@ export default function Mission() {
         <div className="container mt-4">
             <ul className="nav nav-tabs">
                 <li className="nav-item">
-                    <a className={`nav-link ${activeTab === "form" ? "active" : ""}`} onClick={() => setActiveTab("form")}>Ajouter une mission</a>
+                    <Link className={`nav-link ${activeTab === "form" ? "active" : ""}`} onClick={() => setActiveTab("form")}>Choissir une mission</Link>
                 </li>
                 <li className="nav-item">
-                    <a className={`nav-link ${activeTab === "table" ? "active" : ""}`} onClick={() => setActiveTab("table")}>Missions</a>
+                    <Link className={`nav-link ${activeTab === "table" ? "active" : ""}`} onClick={() => setActiveTab("table")}>Mes Missions</Link>
                 </li>
             </ul>
             <div className="tab-content">
@@ -27,18 +27,58 @@ export default function Mission() {
                     <div className="tab-pane fade show active">
                         <form>
                             <div className="mb-3">
-                                <label htmlFor="title" className="form-label">Titre de la mission</label>
-                                <input type="text" className="form-control" id="title" placeholder="Entrez le titre de la mission" />
+                                <label htmlFor="title" className="form-label">Objet de la mission</label>
+                                <input type="text" className="form-control" id="title" placeholder="Entrez le objet de la mission" />
                             </div>
                             <div className="mb-3">
-                                <label htmlFor="description" className="form-label">Description</label>
-                                <input type="text" className="form-control" id="description" placeholder="Entrez la description" />
+                                <label htmlFor="dateDebut" className="form-label">Date de début</label>
+                                <input type="date" className="form-control" id="dateDebut" />
+                            </div>
+
+                            <div className="mb-3">
+                                <label htmlFor="dateFin" className="form-label">Date de fin</label>
+                                <input type="date" className="form-control" id="dateFin" />
+                            </div>
+
+                            <div className="mb-3">
+                                <label htmlFor="villeDepart" className="form-label">Ville de départ</label>
+                                <input type="text" className="form-control" id="villeDepart" placeholder="Entrez la ville de départ" />
+                            </div>
+
+                            <div className="mb-3">
+                                <label htmlFor="villeFin" className="form-label">Ville d'arrivée</label>
+                                <input type="text" className="form-control" id="villeFin" placeholder="Entrez la ville d'arrivée" />
+                            </div>
+
+                            <div className="mb-3">
+                                <label htmlFor="status" className="form-label">Statut</label>
+                                <select className="form-select" id="status">
+                                    <option value="en_attente">En attente</option>
+                                    <option value="en_cours">En cours</option>
+                                    <option value="terminee">Terminée</option>
+                                </select>
                             </div>
                             <div className="mb-3">
-                                <label htmlFor="date" className="form-label">Date de la mission</label>
-                                <input type="date" className="form-control" id="date" />
+                                <label htmlFor="vehicule" className="form-label">Véhicule</label>
+                                <select className="form-select" id="vehicule">
+                                    <option value="">Sélectionnez un véhicule</option>
+                                    <option value="vehicule1">Véhicule 1</option>
+                                    <option value="vehicule2">Véhicule 2</option>
+                                </select>
                             </div>
-                            <button type="submit" className="btn btn-danger">Ajouter</button>
+                            <div className="mb-3">
+                                <label htmlFor="chauffeur" className="form-label">Chauffeur</label>
+                                <select className="form-select" id="chauffeur">
+                                    <option value="">Sélectionnez un chauffeur</option>
+                                    <option value="chauffeur1">Chauffeur 1</option>
+                                    <option value="chauffeur2">Chauffeur 2</option>
+                                </select>
+                            </div>
+                            <div className="mb-3">
+                                <label htmlFor="dotation" className="form-label">Dotation</label>
+                                <input type="text" className="form-control" id="dotation" placeholder="Entrez la dotation" />
+                            </div>
+                            <button type="submit" className="btn btn-danger">Choissir</button>
                         </form>
                     </div>
                 )}
@@ -71,7 +111,7 @@ export default function Mission() {
                             </table>
                         </div>
                     </div>
- 
+
                 )}
             </div>
         </div>

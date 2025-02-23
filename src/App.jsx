@@ -7,6 +7,7 @@ import Mission from './mission';
 import Vehicule from './véhicule';
 import Fournisseur from './fournisseur';
 import Login from './login';
+import Notifications from './notifications';
 
 export default function Home() {
     const data = [
@@ -27,6 +28,7 @@ export default function Home() {
                             <Route path='/mission' element={<Mission />} />
                             <Route path='/véhicule' element={<Vehicule />} />
                             <Route path='/fournisseur' element={<Fournisseur data={data} />} />
+                            <Route path='/notifications' element={<Notifications/>} />
                         </Routes>
                     </>
                 } />
